@@ -63,7 +63,7 @@ function CacheBuster({
   };
 
   const isThereNewVersion = (metaVersion, currentVersion) => {
-    return compare(metaVersion, currentVersion, '>');
+    return !compare(metaVersion, currentVersion, '=');
   };
 
   const refreshCacheAndReload = async () => {
